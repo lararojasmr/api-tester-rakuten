@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": [
+    "collection",
+    "meta"
+  ],
+  "properties": {
+    "collection": {
+      "$id": "#/properties/collection",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/collection/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/collection/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "year",
+              "plot",
+              "duration",
+              "audio_qualities",
+              "video_qualities",
+              "genres"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/id",
+                "type": "number"
+              },
+              "title": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/title",
+                "type": "string"
+              },
+              "year": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/year",
+                "type": "number"
+              },
+              "plot": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/plot",
+                "type": ["string", "null"]
+              },
+              "duration": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/duration",
+                "type": ["number", "null"]
+              },
+              "audio_qualities": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/audio_qualities",
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "$id": "#/properties/collection/items/anyOf/0/properties/audio_qualities/items"
+                }
+              },
+              "video_qualities": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/video_qualities",
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "$id": "#/properties/collection/items/anyOf/0/properties/video_qualities/items"
+                }
+              },
+              "genres": {
+                "$id": "#/properties/collection/items/anyOf/0/properties/genres",
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "$id": "#/properties/collection/items/anyOf/0/properties/genres/items"
+                }
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "meta": {
+      "$id": "#/properties/meta",
+      "type": "object",
+      "required": [
+        "total",
+        "page",
+        "per_page"
+      ],
+      "properties": {
+        "total": {
+          "$id": "#/properties/meta/properties/total",
+          "type": "number"
+        },
+        "page": {
+          "$id": "#/properties/meta/properties/page",
+          "type": "number"
+        },
+        "per_page": {
+          "$id": "#/properties/meta/properties/per_page",
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

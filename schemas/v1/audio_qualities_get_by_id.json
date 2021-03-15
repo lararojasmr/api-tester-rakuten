@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "abbr",
+    "position",
+    "default"
+  ],
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "abbr": {
+      "type": "string"
+    },
+    "position": {
+      "type": ["null", "number"]
+    },
+    "default": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "year",
+    "plot",
+    "duration",
+    "audio_qualities",
+    "video_qualities",
+    "genres"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "number"
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string"
+    },
+    "year": {
+      "$id": "#/properties/year",
+      "type": "number"
+    },
+    "plot": {
+      "$id": "#/properties/plot",
+      "type": ["string", "null"]
+    },
+    "duration": {
+      "$id": "#/properties/duration",
+      "type": ["number", "null"]
+    },
+    "audio_qualities": {
+      "$id": "#/properties/audio_qualities",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/audio_qualities/items"
+      }
+    },
+    "video_qualities": {
+      "$id": "#/properties/video_qualities",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/video_qualities/items"
+      }
+    },
+    "genres": {
+      "$id": "#/properties/genres",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/genres/items"
+      }
+    }
+  },
+  "additionalProperties": true
+}

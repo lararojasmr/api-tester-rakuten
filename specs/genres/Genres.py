@@ -1,0 +1,2 @@
+class Genres:
+    path = '/genres'
